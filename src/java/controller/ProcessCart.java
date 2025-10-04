@@ -47,6 +47,7 @@ public class ProcessCart extends HttpServlet {
 	    request.setAttribute("cartItems", items);
 	    RequestDispatcher dis = request.getRequestDispatcher("cart.jsp");
 	    dis.forward(request, response);
+	    
 	}
 	else{
 	    response.sendRedirect("./login");
