@@ -38,6 +38,7 @@ public class ProductDAO {
 	else{
 	    brandId = "p.brand_id = " + brandId;
 	}
+	
 	if(sortFeild == null){
 	    sortFeild = "p.id";
 	    sortOrder = "asc";
@@ -46,6 +47,7 @@ public class ProductDAO {
 	    sortFeild = "sale_rate";
 	    sortOrder = "DESC";
 	}
+	
 	int productStart = (page - 1) * pageSize;
 	try(Connection c = getConnection()){
 	    String sql = String.format("SELECT *, promo_price AS price, 1.0 * (original_price - promo_price) / original_price * 100 AS sale_rate FROM products p "
