@@ -17,7 +17,7 @@ import model.Product;
 
 /**
  *
- * @author Admin
+ * @author Admin nmk
  */
 public class ProductDAO {
     public static Connection getConnection(){
